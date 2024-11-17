@@ -590,6 +590,8 @@ use state is an hook
         1. render the entier react app inside BrowserRouter component of react-router-dom library, provide this step inside main.jsx file
         2. inorder to set a path in component , make sure that each component must be inside Routes Component of react-router-dom library , provide this inside App.jsx file
         3 .to set a path for component use 'Route'component of react-router-dom library.Route component has attributes like 'path' and' element' inorder to set up route for components .All route component must be indide routes component 
+        - Dynamic Routing: we can set up dynamic/ changing value in a url along with : symbol , so react app will understatnd value along with
+        - to set up page not found
 21. Higher Order Components(HOC) : are components whose props will give another component
 22. APi Call in react:
     - using Axious Library :npm install axios
@@ -652,7 +654,7 @@ use state is an hook
                 - steps slice for react app
                     - create js file for defining slice 
                     - createSlice  method call where we have to define reducer as object , its key act as action  ans its value act as reducer function it has minimum one argument which gives slice state
-                    
+            - createAsyncThunk(): used to make asynchronous call in an action in redux  . it accept 2 argument, first is action type string("slice-name/action-name") 2nd argument is callback function , it can return promise .  its output can be 3 different types,- pending statr/fulfilled state/ reject/ state.  'ExtraReducer' in slice cab handke promise return  action. bacause  it has define different cases to update slice state, based on promise output.
         4. Hooks used in Component for managing state using redux
              - useSelector(state=>state.reducer-name) : used to select state from store in a component
              - useDispatch() : used to execute an action from a component. Hook will return a function that is capable of dispatching an action as its argument when we call the function
