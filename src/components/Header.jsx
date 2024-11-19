@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import {Link} from 'react-router-dom'
 
 const Header = ({insideHome}) => {
+  const userCart = useSelector(state=>state.cartReducer )
   const userWishlist = useSelector(state=>state.wishlistReducer)
   return (
     <nav className='flex bg-violet-600 fixed w-full p-5 text-white font-bold'>
@@ -29,7 +30,7 @@ const Header = ({insideHome}) => {
       <i className="fa-solid fa-cart-plus text-green-600">
         
       </i>Cart
-      <span className="bg-black text-white rounded p-1 ml-1">10</span>
+      <span className="bg-black text-white rounded p-1 ml-1">{userCart?.length}</span>
     </Link>
   </li>
 </ul>

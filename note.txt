@@ -664,10 +664,17 @@ use state is an hook
                 - action with argument: dispatch(action-name(arg1,...)) to access argument of action in slice reduce function it uses its second argument which is an object with 2 keys  payload and type . payload will give the argument from  action dispatch by a component
 
 
+
+
+redux is used for managing states to avoid props drilling.redux has a global store,where state can be stored inside the reducer and the reducer will get the updated state  from actions. action can be executed by any component using use dispatch.the values or the state from a store  can be accessed by a component using useSelector hook
+
+
+redux has a store ,reducers in store can store the state
 data store chyune reduceril anu 
 reduceril actionte output verune
 slice :reducerum actionum combine chyan
-
+components execute the action using useDispatch hook
+components access the state in store using useSelector hook
 
 
 
