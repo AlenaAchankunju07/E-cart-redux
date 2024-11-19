@@ -16,7 +16,7 @@ const Home = () => {
     <>
       <Header insideHome={true} />
       <div style={{ paddingTop: '100px' }} className="container px-4 mx-auto"> 
-        {loading ? (
+        {loading ? 
           <div className="flex justify-center items-center my-5 text-lg">
             <img 
               width="150px" 
@@ -26,17 +26,13 @@ const Home = () => {
             />
             loading...
           </div>
-        ) : (
+         : 
           <>
             <div className="grid grid-cols-4 gap-4">
-              {allProducts?.length > 0 ? (
+              {allProducts?.length > 0 ? 
                 allProducts.map(product => (
                   <div key={product?.id} className="rounded border p-2 shadow">
-                    <img 
-                      width="100%" 
-                      height="200px" 
-                      src={product.thumbnail} 
-                      alt="" 
+                    <img width="100%" height="200px" src={product.thumbnail} alt="" 
                     />
                     <div className="text-center">
                       <h3 className="text-xl font-bold">{product.title}</h3>
@@ -49,14 +45,14 @@ const Home = () => {
                     </Link>
                   </div>
                 ))
-              ) : (
+               : (
                 <div className="flex justify-center items-center font-bold text-red-600 my-5 text-lg">
                   Product not found!!
                 </div>
               )}
             </div>
           </>
-        )}
+        }
       </div>
     </>
   );

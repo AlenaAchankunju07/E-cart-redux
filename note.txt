@@ -577,7 +577,9 @@ use state is an hook
                     - [state/props/variable_name] : side effect will apply to the component not only at the time of loading of the component in DOM but also whenever the value of state/props /variable_name given in the dependency changes
 
             - useRef(initialValue) : it is a react hook that lets you reference a value that's not needed for rendering. initialValue is optional in useRef hook, it will return an object with current key 
-
+            - useSelector() : hook used to select state fro redux store
+            - useDispatch() : hook used to dispatch action from a component
+            -useParams() : hook will return dynamic value of route associated with a component
         - Custom Hooks : create a js file to define a specific function for a special task. export the function from the file .function name must start with "use" keyword
 19. Form Handling in react :  there are 2 ways Managing data inside the form by component 
     - Controlled Components : are components which store form data inside its own state
@@ -637,7 +639,7 @@ use state is an hook
         REDUX - STATE MANAGEMENT TOOL
 ------------------------------------------------
 
-        1. A JS library for predictable and maintainable global state management
+        1. A JS library for predictable and maintainable global state management and to avoid props drilling
         2. Redux consist of 2 packages : npm install react-redux @reduxjs/toolkit
             - React-Redux : Official React bindings for Redux, npm install react-redux. 
             - Redux-Toolkit : The official, opinionated, batteries-included toolset for efficient Redux development , npm install @reduxjs/toolkit
@@ -650,7 +652,7 @@ use state is an hook
                 - To provide store to our react app use 'Provider' component of react-redux library. Provider component has 'store' attribute using it we can provide our store to react app. Inorder to do that make Provider component as the root component of our react app. Give these steps in main.jsx file
             - createReducer() : used to create reducers where we can store updated state inside store
             - createAction() : used to create action where we can define logic to update state , output of action automatically return to its reducer
-            - createSlice() : used to combine action and reducer in a single file. return action and reducer . it accept initial state, slice name, object of reducer
+            - createSlice() : used to combine action and reducer in a single file. return action and reducer . it accept initial state, slice name, object of reducer where we can use key as 'action name' and its value as 'reducer function' ,reducer function has 2 argument , 1st is the initial state of the slice and 2nd argumentis an object which contain the data passed from the component when action is dispatched
                 - steps slice for react app
                     - create js file for defining slice 
                     - createSlice  method call where we have to define reducer as object , its key act as action  ans its value act as reducer function it has minimum one argument which gives slice state
@@ -662,7 +664,9 @@ use state is an hook
                 - action with argument: dispatch(action-name(arg1,...)) to access argument of action in slice reduce function it uses its second argument which is an object with 2 keys  payload and type . payload will give the argument from  action dispatch by a component
 
 
-
+data store chyune reduceril anu 
+reduceril actionte output verune
+slice :reducerum actionum combine chyan
 
 
 
